@@ -16,7 +16,7 @@ import jakarta.persistence.Transient;
 
 @Entity
 @Table
-@Access(AccessType.FIELD)
+@Access(AccessType.PROPERTY)
 public class UserSimple {
     
     @Id
@@ -42,8 +42,7 @@ public class UserSimple {
     public Long getId() {
         return id;
     }
-
-    @Access(AccessType.PROPERTY)
+    
     public String getName() {
         return name.toLowerCase();
     }
